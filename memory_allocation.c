@@ -9,7 +9,7 @@
  */
 void memory_allocation_failed(void)
 {
-dprintf(globe->standard_err, "Error: malloc failed");
+dprintf(globe->standard_err, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
 /**
