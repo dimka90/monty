@@ -1,12 +1,16 @@
 #include "monty.h"
 #include <stdio.h>
+/**
+* get_file_descriptor - open a file for reading
+*@filename : name of the file
+* Return : none
+*/
 void get_file_descriptor(char *filename)
 {
 /* assigning value to the file descriptor */
-globe->file =fopen(filename, "r");
-if(globe->file == NULL)
+globe->file = fopen(filename, "r");
+if (globe->file == NULL)
 {
-fclose(globe->file);
 file_access_denied(filename);
 }
 }
@@ -15,9 +19,9 @@ file_access_denied(filename);
 *
 */
 
-void close_file()
+void close_file(void)
 {
-if(globe->file == NULL)
+if (globe->file == NULL)
 {
 return;
 }

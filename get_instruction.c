@@ -5,21 +5,21 @@
 void get_instruction(void)
 {
 int counter = 0;
-instruction_t instructions[]=
-{
+instruction_t instructions[] = {
 {"push", &push},
+{"pall", &pall},
 {NULL, NULL}
 };
-if(globe->token_num == 0)
+if (globe->token_num == 0)
 {
 return;
 }
-for(; instructions[counter].opcode != NULL; counter++)
+for (; instructions[counter].opcode != NULL; counter++)
 {
-if(strcmp(instructions[counter].opcode, globe->tokens[0]) == 0)
+if (strcmp(instructions[counter].opcode, globe->tokens[0]) == 0)
 {
 globe->instruction->opcode = instructions[counter].opcode;
-globe->instruction->f= instructions[counter].f;
+globe->instruction->f = instructions[counter].f;
 return;
 }
 }
@@ -31,9 +31,25 @@ invalid_instruction();
 */
 void invalid_instruction(void)
 {
-dprintf(globe->standard_err, "L%d: unknown instruction %s\n)", globe->line_count,globe->tokens[0]);
+dprintf(globe->standard_err, "L%d: unknown instruction %s\n)",
+	 globe->line_count, globe->tokens[0]);
 close_file();
 free_token();
-/* free_argument(); */
+free_arguments();
 exit(EXIT_FAILURE);
+}
+/**
+* run_instruction - run the instrution
+* Return : None
+*
+*/
+
+void run_instruction(void)
+{
+stack_t *stack = NULL;
+if (globe->token_num == 0)
+{
+return;
+}
+globe->instruction->f(&stack, globe->line_count);
 }
