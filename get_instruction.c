@@ -13,6 +13,8 @@ instruction_t instructions[] = {
 {"swap", &swap},
 {"add", &add},
 {"nop", &nop},
+{"add", &add},
+{"mul", &mul},
 {NULL, NULL}
 };
 if (globe->token_num == 0)
