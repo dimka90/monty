@@ -33,7 +33,7 @@ invalid_instruction();
 */
 void invalid_instruction(void)
 {
-dprintf(globe->standard_err, "L%d: unknown instruction %s\n)",
+dprintf(globe->standard_err, "L%d: unknown instruction %s\n",
 	 globe->line_count, globe->tokens[0]);
 close_file();
 free_token();
