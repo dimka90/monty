@@ -46,6 +46,10 @@ void pall(stack_t **stack, unsigned int line_number)
 {
 stack_t *tempt = *stack;
 stack_t *headcopy = globe->head;
+if (globe->head == NULL)
+{
+return;
+}
 while (tempt)
 {
 tempt = tempt->next;
