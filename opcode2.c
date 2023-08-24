@@ -94,7 +94,7 @@ globe->stack_length -= 1;
 * top element of the stack, and the top element is removed, so
 *  that at the end
 */
-void div(stack_t **stack, unsigned int line_number)
+void _div(stack_t **stack, unsigned int line_number)
 {
 stack_t *tempt, *tempt2;
 (void) stack;
