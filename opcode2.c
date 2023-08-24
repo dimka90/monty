@@ -81,7 +81,7 @@ exit(EXIT_FAILURE);
 }
 tempt = globe->head;
 tempt2 = tempt->next;
-tempt2->n = tempt->n * tempt2->n;
+tempt2->n = tempt2->n * tempt->n;
 delete_stack_node();
 globe->stack_length -= 1;
 }
