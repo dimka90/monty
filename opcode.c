@@ -44,16 +44,17 @@ globe->stack_length += 1;
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-*stack = globe->head;
-if (*stack == NULL)
+stack_t *tempt = globe->head;
+if (tempt == NULL)
 {
 return;
 }
 (void)line_number;
-while (*stack != NULL)
+(void)stack;
+while (tempt != NULL)
 {
-printf("%d\n", (*stack)->n);
-*stack = (*stack)->next;
+printf("%d\n", tempt->n);
+tempt = tempt->next;
 }
 }
 /**
@@ -68,12 +69,14 @@ printf("%d\n", (*stack)->n);
 void pint(stack_t **stack, unsigned int line_number)
 {
 
-*stack = globe->head;
+stack_t *tempt = globe->head;
 
-if (*stack == NULL)
+if (tempt == NULL)
 {
 dprintf(globe->standard_err, "L%d: can't pint, stack empty\n", line_number);
+free_all_args();
 exit(EXIT_FAILURE);
 }
-printf("%d\n", (*stack)->n);
+(void)stack;
+printf("%d\n", tempt->n);
 }

@@ -84,6 +84,7 @@ void free_token(void);
 void free_arguments(void);
 void free_stack(stack_t *head);
 void free_head(void);
+void free_all_args(void);
 /*tokenization function */
 void token_count(void);
 void tokenize(void);

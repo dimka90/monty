@@ -100,4 +100,3 @@ free_stack(head->next);
 }
 free(head);
 }
-
