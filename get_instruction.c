@@ -9,6 +9,7 @@ instruction_t instructions[] = {
 {"push", &push},
 {"pall", &pall},
 {"pint", &pint},
+{"pop", &pop},
 {NULL, NULL}
 };
 if (globe->token_num == 0)

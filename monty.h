@@ -96,6 +96,9 @@ void run_instruction(void);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+/* stack operation */
+void delete_stack_node(void);
 /* File prototype */
 void close_file(void);
 /*utils function */

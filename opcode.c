@@ -80,3 +80,22 @@ exit(EXIT_FAILURE);
 (void)stack;
 printf("%d\n", tempt->n);
 }
+/**
+* pop - Delete a node from a stack
+* @stack: head pointer to stack
+* @line_number: line count
+* Return: void
+*/
+void pop(stack_t **stack, unsigned int line_number)
+{
+(void) stack;
+
+if (globe->head == NULL)
+{
+dprintf(globe->standard_err, "l%d: can't pop an empty stack\n", line_number);
+free_all_args();
+exit(EXIT_FAILURE);
+}
+delete_stack_node();
+globe->stack_length -= 1;
+}
