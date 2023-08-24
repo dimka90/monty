@@ -130,3 +130,4 @@ tempt->prev = tempt1;
 tempt1->prev = NULL;
 globe->head = tempt1;
 }
+

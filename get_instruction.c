@@ -11,6 +11,8 @@ instruction_t instructions[] = {
 {"pint", &pint},
 {"pop", &pop},
 {"swap", &swap},
+{"add", &add},
+{"nop", &nop},
 {NULL, NULL}
 };
 if (globe->token_num == 0)
