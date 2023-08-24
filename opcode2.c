@@ -25,7 +25,7 @@ stack_t *tempt, *tempt2;
 (void) stack;
 if (globe->stack_length < 2)
 {
-dprintf(globe->standard_err, "L%d: can't add, stack too short", line_number);
+dprintf(globe->standard_err, "L%d: can't add, stack too short\n", line_number);
 free_all_args();
 exit(EXIT_FAILURE);
 }
