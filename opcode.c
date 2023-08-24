@@ -99,3 +99,34 @@ exit(EXIT_FAILURE);
 delete_stack_node();
 globe->stack_length -= 1;
 }
+/**
+* swap - swap the values of two node
+* @stack: head pointer
+* @line_number: keeps count of line number
+* Return: none
+*/
+void swap(stack_t **stack, unsigned int line_number)
+{
+stack_t *tempt, *tempt1;
+
+(void) stack;
+if (globe->stack_length < 2)
+{
+dprintf(globe->standard_err, "L%d: can't swap, stack too short\n",
+	line_number);
+free_all_args();
+exit(EXIT_FAILURE);
+}
+tempt = globe->head;
+tempt1 = tempt->next;
+tempt->next = tempt1->next;
+
+if (tempt->next)
+{
+tempt->next->prev = tempt;
+}
+tempt1->next = tempt;
+tempt->prev = tempt1;
+tempt1->prev = NULL;
+globe->head = tempt1;
+}
