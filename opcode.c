@@ -44,28 +44,16 @@ globe->stack_length += 1;
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-stack_t *tempt = *stack;
-stack_t *headcopy = globe->head;
-if (globe->head == NULL)
+stack_t *stack = globe->head;
+if (*stack == NULL)
 {
 return;
 }
-while (tempt)
+while (*stack != NULL)
 {
-tempt = tempt->next;
+printf("%d\n", (*stack)->n);
+*stack = (*stack)->next;
 }
-if (headcopy == NULL)
-{
-line_number = line_number;
-return;
-}
-
-while (headcopy != NULL)
-{
-printf("%d\n", headcopy->n);
-headcopy = headcopy->next;
-}
-
 }
 /**
  * pint - Print the  last item onto a stack.
