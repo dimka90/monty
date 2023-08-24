@@ -44,11 +44,12 @@ globe->stack_length += 1;
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-stack_t *stack = globe->head;
+*stack = globe->head;
 if (*stack == NULL)
 {
 return;
 }
+(void)line_number;
 while (*stack != NULL)
 {
 printf("%d\n", (*stack)->n);
