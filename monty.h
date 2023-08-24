@@ -94,6 +94,7 @@ void run_instruction(void);
 /*opcodes code */
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 /* File prototype */
 void close_file(void);
 /*utils function */

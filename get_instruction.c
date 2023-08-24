@@ -8,6 +8,7 @@ int counter = 0;
 instruction_t instructions[] = {
 {"push", &push},
 {"pall", &pall},
+{"pint", &pint},
 {NULL, NULL}
 };
 if (globe->token_num == 0)

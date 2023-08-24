@@ -28,13 +28,15 @@ tokenize();
 get_instruction();
 run_instruction();
 free_token();
-/*
-printf("%s", globe->line);
-printf("oops code%s\n", globe->tokens[1]);
-printf("line count%d", globe->line_count);
-printf("Token numbers %d", globe->token_num);
-*/
 }
+/**
+*printf("%s", globe->line);
+*printf("oops code%s\n", globe->tokens[1]);
+*printf("line count%d", globe->line_count);
+*printf("Token numbers %d", globe->token_num);
+*/
+
+
 close_file();
 free_arguments();
 

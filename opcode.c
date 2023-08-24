@@ -52,9 +52,8 @@ tempt = tempt->next;
 }
 if (headcopy == NULL)
 {
-dprintf(globe->standard_err, "L%d: can't pint, stack empty\n", line_number);
-free_arguments();
-exit(EXIT_FAILURE);
+line_number = line_number;
+return;
 }
 
 while (headcopy != NULL)
@@ -63,4 +62,25 @@ printf("%d\n", headcopy->n);
 headcopy = headcopy->next;
 }
 
+}
+/**
+ * pint - Print the  last item onto a stack.
+ *
+ * This function print the last item on a stack data structure.
+ *
+ * @stack: Double pointer to the stack onto which the item will be print.
+ * @line_number: The line number associated with the push operation.
+ * Return: None.
+ */
+void pint(stack_t **stack, unsigned int line_number)
+{
+
+*stack = globe->head;
+
+if (*stack == NULL)
+{
+dprintf(globe->standard_err, "L%d: can't pint, stack empty\n", line_number);
+exit(EXIT_FAILURE);
+}
+printf("%d\n", (*stack)->n);
 }
