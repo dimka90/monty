@@ -92,7 +92,7 @@ void pop(stack_t **stack, unsigned int line_number)
 
 if (globe->head == NULL)
 {
-dprintf(globe->standard_err, "l%d: can't pop an empty stack\n", line_number);
+dprintf(globe->standard_err, "L%d: can't pop an empty stack\n", line_number);
 free_all_args();
 exit(EXIT_FAILURE);
 }
